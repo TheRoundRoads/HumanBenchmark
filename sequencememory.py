@@ -1,14 +1,7 @@
-import mss
 import pyautogui
 import time
 from PIL import ImageGrab
 positions = [[858, 366], [992, 361], [1129, 364], [859, 491], [998, 493], [1126, 497], [862, 626], [991, 620], [1123, 624]]
-
-def read_pixel_with_mss(x, y):
-    with mss.mss() as sct:
-        pixel = sct.pixel(x, y)
-        return pixel
-
 
 if __name__ == "__main__":
     time.sleep(2)
