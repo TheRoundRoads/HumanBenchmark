@@ -4,18 +4,24 @@ import pyscreenshot
 from PIL import Image, ImageGrab
 import numpy as np
 
-X = 200
-Y = 200
+X = 500
+Y = 500
 
 def click():
     pyautogui.click(x=X, y=Y)
 
+clicked = 0
 if __name__ == "__main__":
     time.sleep(2)
-
-    while True:
+    pyautogui.click(x=1000, y=600)
+    time.sleep(0.1)
+    while clicked < 5:
         px = ImageGrab.grab().load()
-        if px[200, 200][0] == 75:
+        if 72 <= px[X, Y][0] <= 78:
             click()
-            break
+            clicked += 1
+        
+            time.sleep(0.2)
+            click()
+            time.sleep(0.1)
         

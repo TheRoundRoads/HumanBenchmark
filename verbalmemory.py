@@ -5,7 +5,7 @@ import time
 
 WORDS = set()
 
-SCORE = 1000  # set what score you want to get
+SCORE = 400  # set what score you want to get
 
 def seen():
     pyautogui.click(x=926, y=540)
